@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Password Genarator Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+    <div class="Password_Genarator">
+        <div class="Password">
+            <h1>Auto Password Genarator</h1>
+            <form action="passwordGen.php" method="post">
+                <label  for="length">Password Length:</label>
+                <input type="number" id="length" name="length" min="8" max="32" required>  
+                <br>
+                <label for="symnols">Add Symbols:</label>
+                <input type="checkbox" id="symnols" name="symnols" value="1">
+                <br>
+                <label for="numbers">Add Numbers:</label>
+                <input type="checkbox" id="numbers" name="numbers" value="1">
+                <br>
+                <button type="sumbit">Genarate Password:</button>
+                
+            </form>
+        </div>
+    </div>
+</body>
+</html>
