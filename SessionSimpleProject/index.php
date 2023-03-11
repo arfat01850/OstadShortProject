@@ -11,6 +11,11 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         $_SESSION["Logeedin"]=false;
     }
 }
+
+if(isset($_SESSION['logout'])){
+    $_SESSION["Logeedin"]=false;
+    session_destroy();
+}
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +47,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         </div>
     </div>
     <?php 
-    if(false == $_SESSION['Logeedin']):
+    if(false == $_SESSION["Logeedin"]):
     ?>
     <form  method="POST">
         <label for="name">Name</label>
@@ -57,10 +62,9 @@ if(isset($_POST['username']) && isset($_POST['password'])){
     <?php 
     else:
     ?>
-     <form action="auth.php?logeedin=true" method="POST">
-  
-
-    <button type="submit" >Submit</button>
+     <form action="auth.php" method="POST">
+        <input type="hidden" name="logout" value="1">
+         <button type="submit" >Logout</button>
     </form>
     <?php
     endif;
