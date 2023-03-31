@@ -1,0 +1,22 @@
+#piano {
+    display: flex;
+  }
+  
+  #piano div {
+    width: 50px;
+    height: 150px;
+    margin-right: 10px;
+    background-color: white;
+    border: 1px solid black;
+  }
+  
+  #piano div.black {
+    position: relative;
+    width: 30px;
+    height: 100px;
+    background-color: black;
+    margin-top: -100px;
+    margin-left: -20px;
+    z-index: 1;
+  }
+  
